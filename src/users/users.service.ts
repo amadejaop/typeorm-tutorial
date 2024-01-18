@@ -17,6 +17,14 @@ export class UsersService {
   findAll() {
     // SELECT * FROM user
     return this.usersRepository.find();
+
+    // for more complex queries
+    /* return this.usersRepository.createQueryBuilder('users')
+    .select()
+    .where()
+    .andWhere()
+    .orderBy()
+    .groupBy(); */
   }
 
   findOne(id: number) {
